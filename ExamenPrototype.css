@@ -1,0 +1,15 @@
+﻿namespace ExamenesPrototype
+{
+    public class BaseDatos : ExamenPrototype
+    {
+        public override ExamenPrototype Clone()
+        {
+            return (BaseDatos)this.MemberwiseClone();
+        }
+
+        public override string VerExamen()
+        {
+            return $"Materia: {_materia} | Clave: {_clave} | Docente: {_docente} | Grupo: {_grupo} | Salon: {_salon}";
+        }
+    }
+}
